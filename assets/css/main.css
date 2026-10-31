@@ -1,0 +1,71 @@
+/* 名刺と同じ VS Code Dark+ 系のパレット */
+:root {
+  --bg: #1e1e1e;
+  --bg-deep: #141414;
+  --panel: #252526;
+  --tabbar: #2d2d2d;
+  --line: #3c3c3c;
+  --text: #d4d4d4;
+  --text-strong: #ffffff;
+  --muted: #9a9a9a;
+  --kw: #569cd6;
+  --type: #4ec9b0;
+  --str: #ce9178;
+  --prop: #9cdcfe;
+  --cm: #6a9955;
+  --fn: #dcdcaa;
+  --accent: #007acc;
+  --accent-hi: #4fc1ff;
+  --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --sans: 'Noto Sans JP', system-ui, -apple-system, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-deep);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--accent-hi);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-hi);
+  outline-offset: 2px;
+}
+
+/* シンタックスハイライト用 */
+.mono { font-family: var(--mono); }
+.kw { color: var(--kw); }
+.ty { color: var(--type); }
+.str { color: var(--str); }
+.prop { color: var(--prop); }
+.cm { color: var(--cm); }
+.fn { color: var(--fn); }
+.punc { color: var(--text); }
+.muted { color: var(--muted); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
